@@ -1,7 +1,7 @@
-from backend.prompts.templates import PROMPTS
 from openai import OpenAI
-from shared.logger import get_logger
-from utils.llm_client import generate_response
+from backend.prompts.templates import PROMPTS
+from backend.shared.logger import get_logger
+from backend.utils.llm_client import generate_response
 
 log = get_logger("analyzer")
 

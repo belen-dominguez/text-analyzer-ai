@@ -1,4 +1,4 @@
-from shared.config_loader import ConfigLoader
+from backend.shared.config_loader import ConfigLoader
 
 config = ConfigLoader()
 
@@ -15,8 +15,10 @@ def generate_response(
         "model": model,
         "temperature": temperature,
         "max_output_tokens": max_tokens,
-        "input": input_data,
-        "text" : {"format": {"type": "json_object"}}
+        "input": [
+            {"role": "system", "content": input_data["system_prompt"]},
+            {"role": "user", "content": input_data["user_prompt"]}
+        ],
     }
     
 
