@@ -12,9 +12,26 @@ Web app para analizar texto usando IA. Permite resumir, mejorar la redacción y 
 ```
 text-analyzer-ai/
 ├── backend/
-│ ├── main.py
-│ ├── agents.py
-│ └── prompts.py
+│   ├── agents/
+│   │   ├── __init__.py
+│   │   └── analyzer.py
+│   ├── prompts/
+│   │   ├── __init__.py
+│   │   └── templates.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── requests.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   └── analyzer.py
+│   ├── shared/
+│   │   ├── __init__.py
+│   │   ├── config_loader.py
+│   │   └── logger.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   └── llm_client.py
+│   └── main.py
 ├── frontend/
 │ ├── index.html
 │ ├── style.css

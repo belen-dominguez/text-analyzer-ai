@@ -1,0 +1,8 @@
+app:
+  name: text-analyzer
+  version: 1.0.0
+
+openai:
+  model: gpt-4o-mini
+  max-tokens: 2000
+  temperature: 0.2
