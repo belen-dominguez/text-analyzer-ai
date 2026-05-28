@@ -3,6 +3,7 @@ const resultElement = document.getElementById("result");
 const loading = document.getElementById("loading");
 const actionSelected = document.getElementById("action-selected");
 const errorElement = document.getElementById("error");
+const copyBtn = document.getElementById("copy-btn");
 
 const acciones = {
   summarize: "Resumir",
@@ -24,6 +25,7 @@ form.addEventListener("submit", async (e) => {
   const action = document.querySelector('input[name="action"]:checked').value;
 
   loading.style.display = "block";
+  copyBtn.style.display = "none";
   setInnerHtml({ result: "", action: "", error: "" });
 
   try {
@@ -38,6 +40,7 @@ form.addEventListener("submit", async (e) => {
       action: `Acción seleccionada: <strong>${acciones[action]}</strong>`,
       error: "",
     });
+    copyBtn.style.display = "inline-block";
   } catch (e) {
     console.error(e);
     setInnerHtml({
@@ -48,4 +51,13 @@ form.addEventListener("submit", async (e) => {
   } finally {
     loading.style.display = "none";
   }
+});
+
+copyBtn.addEventListener("click", async () => {
+  const text = resultElement.innerText;
+  await navigator.clipboard.writeText(text);
+  copyBtn.textContent = "Copied! ✓";
+  setTimeout(() => {
+    copyBtn.textContent = "Copy";
+  }, 2000);
 });
