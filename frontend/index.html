@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Analyzer AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Analizador de Texto - IA</h1>
+      <p>Pegá tu texto y elegí qué querés hacer:</p>
+
+      <form>
+        <div class="grey-wrapper">
+          <textarea
+            required
+            id="inputText"
+            rows="10"
+            placeholder="Escribí o pegá tu texto aquí..."
+          ></textarea>
+        </div>
+
+        <div class="radio-wrapper">
+          <div>
+            <input
+              required
+              type="radio"
+              id="Resumir"
+              name="action"
+              value="summarize"
+            />
+            <label for="Resumir">Resumir</label>
+          </div>
+          <div>
+            <input
+              required
+              type="radio"
+              id="Mejorar"
+              name="action"
+              value="improve"
+            />
+            <label for="Mejorar">Mejorar</label>
+          </div>
+          <div>
+            <input
+              required
+              type="radio"
+              id="Clasificar"
+              name="action"
+              value="classify"
+            />
+            <label for="Clasificar">Clasificar</label>
+          </div>
+        </div>
+        <button class="btn" type="submit">Analizar</button>
+      </form>
+
+      <div class="grey-wrapper">
+        <h2>Resultado:</h2>
+        <pre id="result"></pre>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
