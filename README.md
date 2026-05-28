@@ -9,6 +9,7 @@ Web app para analizar texto usando IA. Permite resumir, mejorar la redacción y 
 
 ## Estructura
 
+```
 text-analyzer-ai/
 ├── backend/
 │ ├── main.py
@@ -20,6 +21,7 @@ text-analyzer-ai/
 │ └── app.js
 ├── .env
 └── .gitignore
+```
 
 ## Setup
 
