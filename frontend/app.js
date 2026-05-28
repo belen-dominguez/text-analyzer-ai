@@ -49,4 +49,3 @@ form.addEventListener("submit", async (e) => {
     loading.style.display = "none";
   }
 });
-// La inteligencia artificial (IA) está transformando radicalmente la manera en que vivimos y trabajamos. Desde asistentes virtuales hasta sistemas de diagnóstico médico, la IA está presente en casi todos los sectores. Las empresas invierten millones en desarrollar algoritmos capaces de aprender y adaptarse. Sin embargo, este avance también genera preocupaciones sobre el empleo, la privacidad y la ética. Expertos debaten si la IA será aliada o amenaza para la humanidad en las próximas décadas.
